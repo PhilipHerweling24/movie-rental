@@ -1,12 +1,13 @@
 package com.a00326153.rental.dto;
 
-import lombok.*;
-import org.springframework.hateoas.RepresentationModel;
+import lombok.Data;
+import java.time.LocalDate;
 
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor @EqualsAndHashCode(callSuper = true)
-public class RentalDto extends RepresentationModel<RentalDto> {
+@Data
+public class RentalDto {
     private Long id;
     private String customerName;
-    private String movieTitle;
-    private String rentalDate;
+    private Long movieId;
+    private LocalDate rentalDate;
+    private MovieDto movie;
 }
